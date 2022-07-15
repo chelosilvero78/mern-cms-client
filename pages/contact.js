@@ -22,7 +22,7 @@ function ContactForm() {
         toast.error(data?.error);
         setLoading(false);
       } else {
-        toast.success("Su mensaje a sido enviado, agradecemos su sugerencia... :) ");
+        toast.success("Su mensaje a sido enviado, apreciamos su sugerencia... :) ");
         form.resetFields();
         setLoading(false);
       }

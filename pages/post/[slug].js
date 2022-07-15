@@ -127,7 +127,7 @@ export const SinglePost = ({ post, postComments }) => {
         </Col>
 
         <Col xs={22} xl={6} offset={1}>
-          <Divider>Categories</Divider>
+          <Divider>Categorias</Divider>
 
           {categories.map((c) => (
             <Link href={`/category/${c.slug}`} key={c._id}>
@@ -137,7 +137,7 @@ export const SinglePost = ({ post, postComments }) => {
             </Link>
           ))}
 
-          <Divider>Latest Posts</Divider>
+          <Divider>Ultimas Publicaciones</Divider>
           {latestPosts.map((p) => (
             <Link href={`/post/${p.slug}`} key={p._id}>
               <a>

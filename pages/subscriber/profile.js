@@ -3,7 +3,7 @@ import SubscriberLayout from "../../components/layout/SubscriberLayout";
 function Profile() {
   return (
     <SubscriberLayout>
-      <h1>Profile</h1>
+      <h1>Perfil</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vitae
         veritatis veniam itaque eaque doloremque molestias tenetur fugit quasi

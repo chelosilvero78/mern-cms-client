@@ -64,8 +64,8 @@ const Customize = () => {
       <Row>
         <Col span={24}>
           <Divider>
-            <h1>Customize home page</h1>
-            <p>Set full width image title and subtitle</p>
+            <h1>Personalizar pagina incial</h1>
+            <p>Establecer imagen ampliada título y subtítulo</p>
           </Divider>
         </Col>
 
@@ -75,14 +75,14 @@ const Customize = () => {
           <Input
             style={{ margin: "20px 0px 20px 0px" }}
             size="large"
-            placeholder="Give it a title"
+            placeholder="Indicar titulo"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
 
           <Input
             size="large"
-            placeholder="Give it a subtitle"
+            placeholder="Indicar subtitulo"
             value={subtitle}
             onChange={(e) => setSubtitle(e.target.value)}
           />
