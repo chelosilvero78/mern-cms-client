@@ -27,7 +27,7 @@ const LoadingToRedirect = ({ path = "/" }) => {
         height: "100vh",
       }}
     >
-      <p>Redirecting in {count} seconds</p>
+      <p>Redireccionando en {count} segundos</p>
     </div>
   );
 };

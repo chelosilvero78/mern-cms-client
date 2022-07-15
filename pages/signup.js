@@ -36,13 +36,13 @@ function Signup() {
         setAuth(data);
         // save in local storage
         localStorage.setItem("auth", JSON.stringify(data));
-        toast.success("Successfully signed up");
+        toast.success("Inicio de Sesion satisfactorio");
         setLoading(false);
         // redirect
         router.push("/admin");
       }
     } catch (err) {
-      toast.error("Signup failed. Try again.");
+      toast.error("Fallo al iniciar sesion. Intente nuevamente.");
       console.log(err);
       setLoading(false);
     }
@@ -51,7 +51,7 @@ function Signup() {
   return (
     <Row>
       <Col span={8} offset={8}>
-        <h1 style={{ paddingTop: "100px" }}>Signup</h1>
+        <h1 style={{ paddingTop: "100px" }}>Iniciar Sesion</h1>
 
         <Form
           name="normal_login"
@@ -62,7 +62,7 @@ function Signup() {
           {/* name */}
           <Form.Item
             name="name"
-            rules={[{ required: true, message: "Please input your name!" }]}
+            rules={[{ required: true, message: "Por favor ingrese su nombre!" }]}
           >
             <Input
               prefix={<UserOutlined className="site-form-item-icon" />}
@@ -70,7 +70,7 @@ function Signup() {
             />
           </Form.Item>
           {/* email */}
-          <Form.Item name="email" rules={[{ type: "email" }]}>
+          <Form.Item name="email" rules={[{ type: "email",required:true,message:"Por favor ingrese un email valido" }]}>
             <Input
               prefix={<MailOutlined className="site-form-item-icon" />}
               placeholder="Email"
@@ -79,12 +79,12 @@ function Signup() {
           {/* password */}
           <Form.Item
             name="password"
-            rules={[{ required: true, message: "Please input your Password!" }]}
+            rules={[{ required: true, message: "Por favor ingrese su Contraseña!" }]}
           >
             <Input.Password
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
-              placeholder="Password"
+              placeholder="Contraseña"
             />
           </Form.Item>
 
@@ -95,12 +95,12 @@ function Signup() {
               className="login-form-button"
               loading={loading}
             >
-              Register
+              Registrarse
             </Button>
             <br />
             Or{" "}
             <Link href="/signin">
-              <a>Login now!</a>
+              <a>Ingresar ahora!</a>
             </Link>
           </Form.Item>
         </Form>

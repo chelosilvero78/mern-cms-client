@@ -36,7 +36,7 @@ function Posts() {
   const handleDelete = async (post) => {
     // console.log("DELETE POST", post);
     try {
-      const answer = window.confirm("Are you sure you want to delete?");
+      const answer = window.confirm("Esta seguro que desea eliminar esta publicacion?");
       if (!answer) return;
       const { data } = await axios.delete(`/post/${post._id}`);
       if (data.ok) {
@@ -57,7 +57,7 @@ function Posts() {
           <Button type="primary">
             <Link href="/author/posts/new">
               <a>
-                <PlusOutlined /> Add New
+                <PlusOutlined /> Agregar Nuevo
               </a>
             </Link>
           </Button>

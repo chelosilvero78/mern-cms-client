@@ -124,7 +124,7 @@ function Home() {
                 color: "#fff",
               }}
             >
-              BLOG POSTS
+              BLOG PUBLICACIONES
             </h2>
             <Divider>
               <ThunderboltOutlined />
@@ -147,7 +147,7 @@ function Home() {
           span={24}
           style={{ textAlign: "center", marginTop: 80, marginBottom: 80 }}
         >
-          <Divider>CATEGORIES</Divider>
+          <Divider>CATEGORIAS</Divider>
           <div style={{ textAlign: "center" }}>
             {categories.map((c) => (
               <Link href={`/category/${c.slug}`} key={c._id}>

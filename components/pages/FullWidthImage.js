@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const FullWidthImage = ({
   title = "CMS",
-  subtitle = "MERN STACK",
+  subtitle = "AI CMS",
   fullWidthImage = "/images/image1.jpeg",
 }) => (
   <>

@@ -38,7 +38,7 @@ const MediaLibrary = ({ page = "admin" }) => {
         console.log(info.file, info.fileList);
       }
       if (info.file.status === "done") {
-        message.success(`${info.file.name} file uploaded successfully`);
+        message.success(`${info.file.name} fichero subido satisfactoriamente`);
         // console.log("info.file on drag drop => ", info.file);
         setMedia({
           images: [...media.images, info.file.response],
@@ -46,7 +46,7 @@ const MediaLibrary = ({ page = "admin" }) => {
           showMediaModal: false,
         });
       } else if (info.file.status === "error") {
-        message.error(`${info.file.name} file upload failed.`);
+        message.error(`${info.file.name} fallo al subir fichero.`);
       }
     },
     onDrop(e) {
@@ -63,7 +63,7 @@ const MediaLibrary = ({ page = "admin" }) => {
           images: media.images.filter((image) => image._id !== imageId),
           selected: null,
         });
-        toast.error("Image deleted successfully");
+        toast.error("Imagen eliminada satisfactoriamente");
       }
     } catch (err) {
       console.log(err);
@@ -77,7 +77,7 @@ const MediaLibrary = ({ page = "admin" }) => {
           <InboxOutlined />
         </p>
         <p className="ant-upload-text">
-          Click or drag file to this area to upload
+        Haz clic o arrastra el archivo para cargarlo
         </p>
       </Dragger>
 

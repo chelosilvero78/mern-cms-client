@@ -43,14 +43,14 @@ function UserComments() {
 
   const handleDelete = async (comment) => {
     try {
-      const answer = window.confirm("Are you sure you want to delete?");
+      const answer = window.confirm("Esta seguro que desea borrar?");
       if (!answer) return;
 
       const { data } = await axios.delete(`/comment/${comment._id}`);
       if (data?.ok) {
         setComments(comments.filter((c) => c._id !== comment._id));
         setTotal(total - 1);
-        toast.success("Comment deleted successfully");
+        toast.success("Comentario eliminado satisfactoriamente");
       }
     } catch (err) {
       console.log(err);
@@ -73,7 +73,7 @@ function UserComments() {
       setLoading(false);
       setSelectedComment({});
 
-      toast.success("Comment updated");
+      toast.success("Comentario Actualizado");
     } catch (err) {
       console.log(err);
       setVisible(false);
@@ -91,7 +91,7 @@ function UserComments() {
           <h1 style={{ marginTop: 15 }}>{comments?.length} Comments</h1>
 
           <Input
-            placeholder="Search"
+            placeholder="Buscar"
             type="search"
             value={keyword}
             onChange={(e) => setKeyword(e.target.value.toLowerCase())}
@@ -104,7 +104,7 @@ function UserComments() {
               <List.Item
                 actions={[
                   <Link href={`/post/${item?.postId?.slug}#${item._id}`}>
-                    <a>view</a>
+                    <a>ver</a>
                   </Link>,
                   <a
                     onClick={() => {
@@ -113,9 +113,9 @@ function UserComments() {
                       setContent(item.content);
                     }}
                   >
-                    edit
+                    editar
                   </a>,
-                  <a onClick={() => handleDelete(item)}>delete</a>,
+                  <a onClick={() => handleDelete(item)}>eliminar</a>,
                 ]}
               >
                 <List.Item.Meta
@@ -134,7 +134,7 @@ function UserComments() {
         <Col span={24}>
           <Modal
             visible={visible}
-            title="Update comment"
+            title="Actualizar Comentario"
             onOk={() => setVisible(false)}
             onCancel={() => setVisible(false)}
             footer={null}

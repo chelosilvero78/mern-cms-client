@@ -63,12 +63,12 @@ const AuthorNav = () => {
         <SubMenu key="2" icon={<PushpinOutlined />} title="Posts">
           <Menu.Item key="3">
             <Link href="/author/posts">
-              <a className={activeName("/author/posts")}>All Posts</a>
+              <a className={activeName("/author/posts")}>Publicaciones</a>
             </Link>
           </Menu.Item>
           <Menu.Item key="4">
             <Link href="/author/posts/new">
-              <a className={activeName("/author/posts/new")}>Add New</a>
+              <a className={activeName("/author/posts/new")}>Añadir Nuevo</a>
             </Link>
           </Menu.Item>
         </SubMenu>
@@ -77,12 +77,12 @@ const AuthorNav = () => {
         <SubMenu key="6" icon={<CameraOutlined />} title="Media">
           <Menu.Item key="7">
             <Link href="/author/media/library">
-              <a className={activeName("/author/media/library")}>Library</a>
+              <a className={activeName("/author/media/library")}>Biblioteca</a>
             </Link>
           </Menu.Item>
           <Menu.Item key="8">
             <Link href="/author/media/new">
-              <a className={activeName("/author/media/new")}>Add New</a>
+              <a className={activeName("/author/media/new")}>Añadir Nuevo</a>
             </Link>
           </Menu.Item>
         </SubMenu>
@@ -90,7 +90,7 @@ const AuthorNav = () => {
         {/* comments */}
         <Menu.Item key="9" icon={<CommentOutlined />}>
           <Link href="/author/comments">
-            <a className={activeName("/author/comments")}>Comments</a>
+            <a className={activeName("/author/comments")}>Comentarios</a>
           </Link>
         </Menu.Item>
 

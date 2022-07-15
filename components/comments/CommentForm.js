@@ -14,7 +14,7 @@ const CommentForm = ({ comment, setComment, handleSubmit, loading }) => {
       <TextArea
         value={comment}
         onChange={(e) => setComment(e.target.value)}
-        placeholder="Write a comment..."
+        placeholder="Escriba su comentario..."
         rows="4"
         disabled={auth?.user === null && auth?.token === ""}
         maxLength={200}

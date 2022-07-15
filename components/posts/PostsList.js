@@ -9,8 +9,8 @@ const PostsList = ({ posts, handleDelete, handleEdit }) => {
       renderItem={(item) => (
         <List.Item
           actions={[
-            <a onClick={() => handleEdit(item)}>edit</a>,
-            <a onClick={() => handleDelete(item)}>delete</a>,
+            <a onClick={() => handleEdit(item)}>editar</a>,
+            <a onClick={() => handleDelete(item)}>eliminar</a>,
           ]}
         >
           <List.Item.Meta title={item.title} />

@@ -9,7 +9,7 @@ const CategoryUpdateModal = ({
 }) => {
   return (
     <Modal
-      title="Update category"
+      title="Actualizar Categoria"
       visible={visible}
       footer={null}
       onCancel={() => setVisible(false)}
@@ -21,11 +21,11 @@ const CategoryUpdateModal = ({
         <Form.Item name="name">
           <Input
             prefix={<EditOutlined className="site-form-item-icon" />}
-            placeholder="Give it a name"
+            placeholder="Asignale un nombre"
           />
         </Form.Item>
         <Button type="primary" htmlType="submit">
-          Submit
+          Enviar
         </Button>
       </Form>
     </Modal>

@@ -66,13 +66,13 @@ const TopNav = () => {
 
       <Menu.Item key="posts" icon={<DatabaseOutlined />}>
         <Link href="/posts">
-          <a>Posts</a>
+          <a>Publicaciones</a>
         </Link>
       </Menu.Item>
 
       <Menu.Item key="contact" icon={<MailOutlined />}>
         <Link href="/contact">
-          <a>Contact</a>
+          <a>Contacto</a>
         </Link>
       </Menu.Item>
 
@@ -84,12 +84,12 @@ const TopNav = () => {
             icon={<UserAddOutlined />}
           >
             <Link href="/signup">
-              <a>Signup</a>
+              <a>Registro</a>
             </Link>
           </Menu.Item>
           <Menu.Item key="signin" icon={<UserOutlined />}>
             <Link href="/signin">
-              <a>Signin</a>
+              <a>Iniciar sesion</a>
             </Link>
           </Menu.Item>
         </>
@@ -103,7 +103,7 @@ const TopNav = () => {
             title={auth?.user?.name || "Dashboard"}
             style={{ marginLeft: "auto" }}
           >
-            <Menu.ItemGroup title="Management">
+            <Menu.ItemGroup title="Administracion">
               <Menu.Item key="setting:2">
                 <Link href={roleBasedLink()}>
                   <a>Dashboard</a>
@@ -117,7 +117,7 @@ const TopNav = () => {
             key="signout"
             icon={<LogoutOutlined />}
           >
-            <a>Sign out</a>
+            <a>Cerrar sesion</a>
           </Menu.Item>
         </>
       )}

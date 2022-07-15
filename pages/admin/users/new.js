@@ -34,12 +34,12 @@ const NewUser = () => {
         toast.error(data.error);
         setLoading(false);
       } else {
-        toast.success("User created successfully");
+        toast.success("Usuario creado satisfactoriamente");
         setLoading(false);
       }
     } catch (err) {
       console.log(err);
-      toast.error("Signup failed. Try again.");
+      toast.error("Fallo al Iniciar Sesion. Intente nuevamente.");
       setLoading(false);
     }
   };
@@ -53,7 +53,7 @@ const NewUser = () => {
           <Input
             style={{ margin: "20px 0px 10px 0px" }}
             size="large"
-            placeholder="Full name"
+            placeholder="Nombres Completos"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -67,7 +67,7 @@ const NewUser = () => {
           <Input
             style={{ margin: "10px 0px 10px 0px" }}
             size="large"
-            placeholder="Website"
+            placeholder="Sitio Web"
             value={website}
             onChange={(e) => setWebsite(e.target.value)}
           />
@@ -78,7 +78,7 @@ const NewUser = () => {
               size="large"
               style={{ margin: "10px 0px 10px 0px" }}
             >
-              Generate password
+              Generar contraseña
             </Button>
             <Input.Password
               style={{ margin: "10px 0px 10px 0px" }}
@@ -103,7 +103,7 @@ const NewUser = () => {
             checked={checked}
             onChange={(e) => setChecked(e.target.checked)}
           >
-            Send the new user an email about their account.
+          Enviar al nuevo usuario un email con información sobre su cuenta
           </Checkbox>
 
           <Button
@@ -113,7 +113,7 @@ const NewUser = () => {
             loading={loading}
             block
           >
-            Submit
+            Enviar
           </Button>
         </Col>
       </Row>

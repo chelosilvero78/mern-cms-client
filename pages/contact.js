@@ -22,21 +22,21 @@ function ContactForm() {
         toast.error(data?.error);
         setLoading(false);
       } else {
-        toast.success("Your message has been sent");
+        toast.success("Su mensaje a sido enviado, agradecemos su sugerencia... :) ");
         form.resetFields();
         setLoading(false);
       }
     } catch (err) {
       console.log("err => ", err);
       setLoading(false);
-      toast.error("Email failed. Try again.");
+      toast.error("Fallo de Email. Intente nuevamente.");
     }
   };
 
   return (
     <Row>
       <Col span={8} offset={8}>
-        <h1 style={{ paddingTop: "100px" }}>Contact</h1>
+        <h1 style={{ paddingTop: "100px" }}>Contacto</h1>
 
         <Form
           form={form}
@@ -47,34 +47,34 @@ function ContactForm() {
           {/* name */}
           <Form.Item
             name="name"
-            rules={[{ required: true, message: "Please enter your name" }]}
+            rules={[{ required: true, message: "Por favor ingresar sus nombres y apellidos completos" }]}
             hasFeedback
           >
             <Input
               prefix={<MailOutlined className="site-form-item-icon" />}
-              placeholder="Your name"
+              placeholder="Tus nombres"
             />
           </Form.Item>
           {/* email */}
           <Form.Item
             name="email"
-            rules={[{ required: true, message: "Please enter your email" }]}
+            rules={[{ required: true, message: "Por favor Ingrese un email valido" }]}
             hasFeedback
           >
             <Input
               prefix={<LockOutlined className="site-form-item-icon" />}
-              placeholder="Your email"
+              placeholder="Tu email"
             />
           </Form.Item>
           {/* message */}
           <Form.Item
             name="message"
-            rules={[{ required: true, message: "Please enter your message" }]}
+            rules={[{ required: true, message: "Por favor ingrese su mensaje" }]}
             hasFeedback
           >
             <Input.TextArea
               prefix={<MailOutlined className="site-form-item-icon" />}
-              placeholder="Write your message here.."
+              placeholder="Escribe tu mensaje aqui.."
             />
           </Form.Item>
 
@@ -84,7 +84,7 @@ function ContactForm() {
               htmlType="submit"
               className="login-form-button"
             >
-              Submit
+              Enviar
             </Button>
           </Form.Item>
         </Form>

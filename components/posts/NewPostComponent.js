@@ -71,7 +71,7 @@ function NewPostComponent({ page = "admin" }) {
         setLoading(false);
       } else {
         // console.log("POST PUBLISHED RES => ", data);
-        toast.success("Post created successfully");
+        toast.success("Publicacion creada satisfactoriamente");
         localStorage.removeItem("post-title");
         localStorage.removeItem("post-content");
         setMedia({ ...media, selected: null });
@@ -79,7 +79,7 @@ function NewPostComponent({ page = "admin" }) {
       }
     } catch (err) {
       console.log(err);
-      toast.error("Post create failed. Try again.");
+      toast.error("Fallo al crear Publicacion.Intente nuevamente.");
       setLoading(false);
     }
   };
@@ -87,11 +87,11 @@ function NewPostComponent({ page = "admin" }) {
   return (
     <Row>
       <Col span={14} offset={1}>
-        <h1>Create new post</h1>
+        <h1>Crear nueva publicacion</h1>
         <Input
           size="large"
           value={title}
-          placeholder="Give your post a title"
+          placeholder="Asignale un titulo a tu publicacion"
           onChange={(e) => {
             setTitle(e.target.value);
             localStorage.setItem("post-title", JSON.stringify(e.target.value));
@@ -122,22 +122,22 @@ function NewPostComponent({ page = "admin" }) {
           style={{ margin: "10px 0px 10px 0px", width: "100%" }}
           onClick={() => setVisible(true)}
         >
-          Preview
+          Previsualizar
         </Button>
 
         <Button
           style={{ margin: "10px 0px 10px 0px", width: "100%" }}
           onClick={() => setMedia({ ...media, showMediaModal: true })}
         >
-          <UploadOutlined /> Featured Image
+          <UploadOutlined /> Imagen
         </Button>
 
-        <h4>Categories</h4>
+        <h4>Categorias</h4>
 
         <Select
           mode="multiple"
           allowClear={true}
-          placeholder="Select categories"
+          placeholder="Selecionar categorias"
           style={{ width: "100%" }}
           onChange={(v) => setCategories(v)}
         >
@@ -158,12 +158,12 @@ function NewPostComponent({ page = "admin" }) {
           type="primary"
           onClick={handlePublish}
         >
-          Publish
+          Publicar
         </Button>
       </Col>
       {/* preview modal */}
       <Modal
-        title="Preview"
+        title="Previsualizar"
         centered
         visible={visible}
         onOk={() => setVisible(false)}

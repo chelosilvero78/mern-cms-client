@@ -89,7 +89,7 @@ function EditPost({ page = "admin" }) {
       }
     } catch (err) {
       console.log(err);
-      toast.error("Post create failed. Try again.");
+      toast.error("Error al crear la publicación. Intentar otra vez.");
       setLoading(false);
     }
   };
@@ -101,7 +101,7 @@ function EditPost({ page = "admin" }) {
         <Input
           size="large"
           value={title}
-          placeholder="Give your post a title"
+          placeholder="Dale un título a tu publicación"
           onChange={(e) => {
             setTitle(e.target.value);
             localStorage.setItem("post-title", JSON.stringify(e.target.value));
@@ -110,7 +110,7 @@ function EditPost({ page = "admin" }) {
         <br />
         <br />
         {loading ? (
-          <div>Loading...</div>
+          <div>Cargando...</div>
         ) : (
           <div className="editor-scroll">
             <Editor
@@ -137,17 +137,17 @@ function EditPost({ page = "admin" }) {
           style={{ margin: "10px 0px 10px 0px", width: "100%" }}
           onClick={() => setVisible(true)}
         >
-          Preview
+          Previsualizar
         </Button>
 
         <Button
           style={{ margin: "10px 0px 10px 0px", width: "100%" }}
           onClick={() => setMedia({ ...media, showMediaModal: true })}
         >
-          <UploadOutlined /> Featured Image
+          <UploadOutlined /> Foto principal
         </Button>
 
-        <h4>Categories</h4>
+        <h4>Categorias</h4>
 
         <Select
           mode="multiple"
@@ -180,12 +180,12 @@ function EditPost({ page = "admin" }) {
           type="primary"
           onClick={handlePublish}
         >
-          Publish
+          Publicar
         </Button>
       </Col>
       {/* preview modal */}
       <Modal
-        title="Preview"
+        title="Previsualizar"
         centered
         visible={visible}
         onOk={() => setVisible(false)}
@@ -203,7 +203,7 @@ function EditPost({ page = "admin" }) {
       {/* media modal */}
       <Modal
         visible={media.showMediaModal}
-        title="Media"
+        title="Multimedia"
         onOk={() => setMedia({ ...media, showMediaModal: false })}
         onCancel={() => setMedia({ ...media, showMediaModal: false })}
         width={720}

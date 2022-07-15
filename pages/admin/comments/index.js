@@ -56,14 +56,14 @@ function Comments() {
 
   const handleDelete = async (comment) => {
     try {
-      const answer = window.confirm("Are you sure you want to delete?");
+      const answer = window.confirm("Esta seguro que desea eliminar?");
       if (!answer) return;
 
       const { data } = await axios.delete(`/comment/${comment._id}`);
       if (data?.ok) {
         setComments(comments.filter((c) => c._id !== comment._id));
         setTotal(total - 1);
-        toast.success("Comment deleted successfully");
+        toast.success("Comentario Eliminado satisfactoriamente");
       }
     } catch (err) {
       console.log(err);
@@ -81,7 +81,7 @@ function Comments() {
           <h1 style={{ marginTop: 15 }}>{comments?.length} Comments</h1>
 
           <Input
-            placeholder="Search"
+            placeholder="Buscar"
             type="search"
             value={keyword}
             onChange={(e) => setKeyword(e.target.value.toLowerCase())}
@@ -94,9 +94,9 @@ function Comments() {
               <List.Item
                 actions={[
                   <Link href={`/post/${item?.postId?.slug}#${item._id}`}>
-                    <a>view</a>
+                    <a>ver</a>
                   </Link>,
-                  <a onClick={() => handleDelete(item)}>delete</a>,
+                  <a onClick={() => handleDelete(item)}>eliminar</a>,
                 ]}
               >
                 <List.Item.Meta
@@ -120,7 +120,7 @@ function Comments() {
               loading={loading}
               onClick={() => setPage(page + 1)}
             >
-              Load More
+              Cargar Mas
             </Button>
           </Col>
         </Row>

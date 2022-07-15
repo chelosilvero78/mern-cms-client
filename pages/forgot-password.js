@@ -25,13 +25,13 @@ function ForgotPassword() {
         toast.error(data.error);
         setLoading(false);
       } else {
-        toast.success("Check your email. Password reset code is sent.");
+        toast.success("Verifique su cuenta de email. Se le ha enviardo el codigo para restablecer su contraseña.");
         setLoading(false);
         setVisible(true);
       }
     } catch (err) {
       console.log(err);
-      toast.error("Forgot password failed. Try again.");
+      toast.error("Fallo de Restablecimiento de contaseña. Intente nuevamente.");
       setLoading(false);
     }
   };
@@ -45,7 +45,7 @@ function ForgotPassword() {
         setLoading(false);
       } else {
         toast.success(
-          "Password changed successfully. Please login with your new password"
+          "Contraseña cambiada con éxito. Por favor inicie sesión con su nueva contraseña"
         );
         form.resetFields(["email"]);
         setLoading(false);
@@ -53,7 +53,7 @@ function ForgotPassword() {
       }
     } catch (err) {
       console.log(err);
-      toast.error("Reset password failed. Try again.");
+      toast.error("Fallo Restablecimiento de contraseña. Intente nuevamente.");
       setLoading(false);
     }
   };
@@ -61,7 +61,7 @@ function ForgotPassword() {
   return (
     <Row>
       <Col span={8} offset={8}>
-        <h1 style={{ paddingTop: "100px" }}>Forgot Password</h1>
+        <h1 style={{ paddingTop: "100px" }}>Olvide mi Contraseña</h1>
 
         <Form
           form={form}
@@ -91,14 +91,14 @@ function ForgotPassword() {
                 rules={[
                   {
                     required: true,
-                    message: "Please enter your new Password!",
+                    message: "Por favor ingrese su Nueva Contraseña!",
                   },
                 ]}
               >
                 <Input.Password
                   prefix={<LockOutlined className="site-form-item-icon" />}
                   type="password"
-                  placeholder="New Password"
+                  placeholder="Nueva Contraseña"
                 />
               </Form.Item>
             </>
@@ -111,7 +111,7 @@ function ForgotPassword() {
               className="login-form-button"
               loading={loading}
             >
-              Submit
+              Enviar
             </Button>
           </Form.Item>
         </Form>

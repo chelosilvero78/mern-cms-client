@@ -13,7 +13,7 @@ const Footer = () => (
         <Col span={8} style={{ textAlign: "center" }}>
           <UsergroupAddOutlined style={{ fontSize: 80 }} />
           <br />
-          The ultimate blogging platform
+          La plataforma de blogs definitiva
         </Col>
 
         <Col span={8} style={{ textAlign: "center" }}>

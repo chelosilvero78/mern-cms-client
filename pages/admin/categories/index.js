@@ -43,12 +43,12 @@ function Categories() {
       const { data } = await axios.post("/category", values);
       setPost((prev) => ({ ...prev, categories: [data, ...categories] }));
       // console.log(data);
-      toast.success("Category created successfully");
+      toast.success("Categoría creada satisfactoriamente");
       setLoading(false);
       form.resetFields(["name"]);
     } catch (err) {
       console.log(err);
-      toast.error("Category create failed");
+      toast.error("Fallo al intentar crear Categoría");
       setLoading(false);
     }
   };
@@ -60,10 +60,10 @@ function Categories() {
         ...prev,
         categories: categories.filter((cat) => cat._id !== data._id),
       }));
-      toast.success("Category deleted successfully");
+      toast.success("Categoria ha si Eliminada satisfactoriamente");
     } catch (err) {
       console.log(err);
-      toast.error("Category delete failed");
+      toast.error("Fallo al intentar eliminar Categoria");
     }
   };
 
@@ -85,12 +85,12 @@ function Categories() {
         return cat;
       });
       setPost((prev) => ({ ...prev, categories: newCategories }));
-      toast.success("Categrory updated successfully");
+      toast.success("Categoría actualizada satisfactoriamente");
       setVisible(false);
       setUpdatingCategory({});
     } catch (err) {
       console.log(err);
-      toast.error("Category update failed");
+      toast.error("Fallo al intentar actualizar Categoría");
     }
   };
 
@@ -99,18 +99,18 @@ function Categories() {
       <Row>
         {/* first column */}
         <Col xs={22} sm={22} lg={10} offset={1}>
-          <h1>Categories</h1>
-          <p>Add new category</p>
+          <h1>Categorias</h1>
+          <p>Agregar nueva categoria</p>
 
           <Form onFinish={onFinish} form={form}>
             <Form.Item name="name">
               <Input
                 prefix={<EditOutlined className="site-form-item-icon" />}
-                placeholder="Give it a name"
+                placeholder="Dale un nombre"
               />
             </Form.Item>
             <Button loading={loading} type="primary" htmlType="submit">
-              Submit
+              Enviar
             </Button>
           </Form>
         </Col>
@@ -122,8 +122,8 @@ function Categories() {
             renderItem={(item) => (
               <List.Item
                 actions={[
-                  <a onClick={() => handleEdit(item)}>edit</a>,
-                  <a onClick={() => handleDelete(item)}>delete</a>,
+                  <a onClick={() => handleEdit(item)}>editar</a>,
+                  <a onClick={() => handleDelete(item)}>eliminar</a>,
                 ]}
               >
                 <List.Item.Meta title={item.name} />

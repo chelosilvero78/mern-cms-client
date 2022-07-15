@@ -56,7 +56,7 @@ const SubscriberNav = () => {
         {/* comments */}
         <Menu.Item key="9" icon={<CommentOutlined />}>
           <Link href="/subscriber/comments">
-            <a className={activeName("/subscriber/comments")}>Comments</a>
+            <a className={activeName("/subscriber/comments")}>Comentarios</a>
           </Link>
         </Menu.Item>
 

@@ -70,11 +70,11 @@ const ProfileUpdate = ({ page = "admin" }) => {
           localStorage.setItem("auth", JSON.stringify(fromLocalStorage));
         }
 
-        toast.success("User updated successfully");
+        toast.success("Usuario Actualizado satisfactoriamente");
       }
     } catch (err) {
       console.log(err);
-      toast.error("User update failed. Try again.");
+      toast.error("Fallo al actualizar Usuario.Intente nuevamente.");
       setLoading(false);
     }
   };
@@ -83,7 +83,7 @@ const ProfileUpdate = ({ page = "admin" }) => {
   return (
     <Row>
       <Col span={12} offset={6}>
-        <h4 style={{ marginBottom: "-10px" }}>Profile update</h4>
+        <h4 style={{ marginBottom: "-10px" }}>Perfil actualizado</h4>
 
         <div style={{ marginBottom: 20, textAlign: "center" }}>
           {media.selected ? (
@@ -106,7 +106,7 @@ const ProfileUpdate = ({ page = "admin" }) => {
         <Input
           style={{ margin: "20px 0px 10px 0px" }}
           size="large"
-          placeholder="Full name"
+          placeholder="Nombre Completo"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -120,7 +120,7 @@ const ProfileUpdate = ({ page = "admin" }) => {
         <Input
           style={{ margin: "10px 0px 10px 0px" }}
           size="large"
-          placeholder="Website"
+          placeholder="Sitio Web"
           value={website}
           onChange={(e) => setWebsite(e.target.value)}
         />
@@ -152,7 +152,7 @@ const ProfileUpdate = ({ page = "admin" }) => {
           loading={loading}
           block
         >
-          Submit
+          Enviar
         </Button>
       </Col>
     </Row>
